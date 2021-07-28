@@ -6,7 +6,7 @@
     <ul class="lista-fotos">
       <li class="lista-fotos-item" v-for="foto of fotosComFiltro">
         <meu-painel :titulo="foto.titulo">
-          <imagem-responsiva :url="foto.url" :titulo="foto.titulo"/>
+          <imagem-responsiva v-meu-transform="{ incremento: 15, animate: true}" :url="foto.url" :titulo="foto.titulo"/>
           <meu-botao
           tipo="button" 
           rotulo="REMOVER" 
@@ -84,6 +84,7 @@ export default {
 
 .filtro {
   display: block;
-  width: 100%;
+  width: 96%;
+  margin: 2% 2%;
 }
 </style>
